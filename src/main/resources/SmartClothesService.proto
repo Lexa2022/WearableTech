@@ -1,0 +1,73 @@
+syntax = "proto3"; // Make sure to have proto3 for your proto files.
+
+// generate separate or multiple java file for each generated class.
+option java_multiple_files = true;
+// Package inside the src/main/java where generated classes will reside.
+option java_package = "LR_CA.SmartClothesService";
+// Class name of the wrapper class which represent this file.
+option java_outer_classname = "SmartClothesServicelmpl";
+
+// package name to avoid name collisions
+package service2;
+
+// Interface exported by the server.
+service SmartClothesService {
+
+// rpc method for CLIENT STREAMING calls
+  rpc bodyTempControl(stream ControlRequest) returns (stream ControlResponse){}
+
+  rpc physicalMovements(stream MovementsRequest) returns (stream MovementsResponse){}
+
+// This is a bidirectional Streaming
+  rpc musclesStretching(stream StretchingRequest) returns (stream StretchingResponse);
+
+  }
+
+
+// define each variable in RPC method separately
+// That command its for CLIENT STREAMING RPC REQUEST
+message ControlRequest {
+  string TempControl1 = 1;
+
+}
+// That command its for CLIENT STREAMING RPC RESPONSE
+message ControlResponse {
+  string TempControl1 = 1;
+
+}
+// That command its for CLIENT STREAMING RPC REQUEST
+message MovementsRequest {
+   string MovementsRequest1 = 1;
+
+}
+// That command its for CLIENT STREAMING RPC RESPONSE
+message MovementsResponse {
+   string MovementsRequest1 = 1;
+
+}
+
+//That command its for BIDIRECTIONAL STREAMING
+message StretchingRequest {
+   string Stretching1 = 1;
+
+}
+message StretchingResponse {
+   string Stretching1 = 1;
+
+}
+
+
+// Enum is a complex datatype that may contain other variables
+message Message {
+	enum Enum {
+        UNKNOWN = 0;
+        LOW = 1;
+        HIGH = 2;
+    }
+
+    Enum detail = 1;
+}
+
+message Empty {
+
+}
