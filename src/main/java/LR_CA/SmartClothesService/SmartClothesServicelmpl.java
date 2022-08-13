@@ -25,16 +25,6 @@ public final class SmartClothesServicelmpl {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service2_ControlResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_MovementsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_MovementsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_MovementsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_MovementsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_service2_StretchingRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -65,23 +55,18 @@ public final class SmartClothesServicelmpl {
     java.lang.String[] descriptorData = {
       "\n\031SmartClothesService.proto\022\010service2\"&\n" +
       "\016ControlRequest\022\024\n\014TempControl1\030\001 \001(\t\"\'\n" +
-      "\017ControlResponse\022\024\n\014TempControl1\030\001 \001(\t\"-" +
-      "\n\020MovementsRequest\022\031\n\021MovementsRequest1\030" +
-      "\001 \001(\t\".\n\021MovementsResponse\022\031\n\021MovementsR" +
-      "equest1\030\001 \001(\t\"(\n\021StretchingRequest\022\023\n\013St" +
-      "retching1\030\001 \001(\t\")\n\022StretchingResponse\022\023\n" +
-      "\013Stretching1\030\001 \001(\t\"Y\n\007Message\022&\n\006detail\030" +
-      "\001 \001(\0162\026.service2.Message.Enum\"&\n\004Enum\022\013\n" +
-      "\007UNKNOWN\020\000\022\007\n\003LOW\020\001\022\010\n\004HIGH\020\002\"\007\n\005Empty2\213" +
-      "\002\n\023SmartClothesService\022L\n\017bodyTempContro" +
-      "l\022\030.service2.ControlRequest\032\031.service2.C" +
-      "ontrolResponse\"\000(\0010\001\022R\n\021physicalMovement" +
-      "s\022\032.service2.MovementsRequest\032\033.service2" +
-      ".MovementsResponse\"\000(\0010\001\022R\n\021musclesStret" +
-      "ching\022\033.service2.StretchingRequest\032\034.ser" +
-      "vice2.StretchingResponse(\0010\001B6\n\031LR_CA.Sm" +
-      "artClothesServiceB\027SmartClothesServicelm" +
-      "plP\001b\006proto3"
+      "\017ControlResponse\022\024\n\014TempControl1\030\001 \001(\t\"(" +
+      "\n\021StretchingRequest\022\023\n\013Stretching1\030\001 \001(\t" +
+      "\")\n\022StretchingResponse\022\023\n\013Stretching1\030\001 " +
+      "\001(\t\"Y\n\007Message\022&\n\006detail\030\001 \001(\0162\026.service" +
+      "2.Message.Enum\"&\n\004Enum\022\013\n\007UNKNOWN\020\000\022\007\n\003L" +
+      "OW\020\001\022\010\n\004HIGH\020\002\"\007\n\005Empty2\265\001\n\023SmartClothes" +
+      "Service\022J\n\017bodyTempControl\022\030.service2.Co" +
+      "ntrolRequest\032\031.service2.ControlResponse\"" +
+      "\000(\001\022R\n\021musclesStretching\022\033.service2.Stre" +
+      "tchingRequest\032\034.service2.StretchingRespo" +
+      "nse(\0010\001B6\n\031LR_CA.SmartClothesServiceB\027Sm" +
+      "artClothesServicelmplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -107,38 +92,26 @@ public final class SmartClothesServicelmpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_ControlResponse_descriptor,
         new java.lang.String[] { "TempControl1", });
-    internal_static_service2_MovementsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_service2_MovementsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_MovementsRequest_descriptor,
-        new java.lang.String[] { "MovementsRequest1", });
-    internal_static_service2_MovementsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_service2_MovementsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_MovementsResponse_descriptor,
-        new java.lang.String[] { "MovementsRequest1", });
     internal_static_service2_StretchingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_service2_StretchingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_StretchingRequest_descriptor,
         new java.lang.String[] { "Stretching1", });
     internal_static_service2_StretchingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_service2_StretchingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_StretchingResponse_descriptor,
         new java.lang.String[] { "Stretching1", });
     internal_static_service2_Message_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_service2_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_Message_descriptor,
         new java.lang.String[] { "Detail", });
     internal_static_service2_Empty_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_service2_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_Empty_descriptor,

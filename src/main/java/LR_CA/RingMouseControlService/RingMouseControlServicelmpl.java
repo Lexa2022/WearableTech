@@ -60,16 +60,15 @@ public final class RingMouseControlServicelmpl {
       "\004Text\030\001 \001(\t\"$\n\024SelectObjectResponse\022\014\n\004T" +
       "ext\030\001 \001(\t\"Y\n\007Message\022&\n\006detail\030\001 \001(\0162\026.s" +
       "ervice1.Message.Enum\"&\n\004Enum\022\013\n\007UNKNOWN\020" +
-      "\000\022\007\n\003LOW\020\001\022\010\n\004HIGH\020\002\"\007\n\005Empty2\250\002\n\027RingMo" +
-      "useControlService\022D\n\021moveCursorToRight\022\025" +
-      ".service1.MoveRequest\032\026.service1.MoveRes" +
-      "ponse\"\000\022C\n\020moveCursorToLeft\022\025.service1.M" +
-      "oveRequest\032\026.service1.MoveResponse\"\000\022-\n\005" +
-      "empty\022\021.service1.Message\032\017.service1.Empt" +
-      "y\"\000\022S\n\020SelectObjectText\022\035.service1.Selec" +
-      "tObjectRequest\032\036.service1.SelectObjectRe" +
-      "sponse0\001B>\n\035LR_CA.RingMouseControlServic" +
-      "eB\033RingMouseControlServicelmplP\001b\006proto3"
+      "\000\022\007\n\003LOW\020\001\022\010\n\004HIGH\020\002\"\007\n\005Empty2\334\001\n\027RingMo" +
+      "useControlService\022=\n\nmoveCursor\022\025.servic" +
+      "e1.MoveRequest\032\026.service1.MoveResponse\"\000" +
+      "\022-\n\005empty\022\021.service1.Message\032\017.service1." +
+      "Empty\"\000\022S\n\020SelectObjectText\022\035.service1.S" +
+      "electObjectRequest\032\036.service1.SelectObje" +
+      "ctResponse0\001B>\n\035LR_CA.RingMouseControlSe" +
+      "rviceB\033RingMouseControlServicelmplP\001b\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

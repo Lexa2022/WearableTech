@@ -14,9 +14,9 @@ package service2;
 service SmartClothesService {
 
 // rpc method for CLIENT STREAMING calls
-  rpc bodyTempControl(stream ControlRequest) returns (stream ControlResponse){}
+  rpc bodyTempControl(stream ControlRequest) returns (ControlResponse){}
 
-  rpc physicalMovements(stream MovementsRequest) returns (stream MovementsResponse){}
+
 
 // This is a bidirectional Streaming
   rpc musclesStretching(stream StretchingRequest) returns (stream StretchingResponse);
@@ -35,16 +35,7 @@ message ControlResponse {
   string TempControl1 = 1;
 
 }
-// That command its for CLIENT STREAMING RPC REQUEST
-message MovementsRequest {
-   string MovementsRequest1 = 1;
 
-}
-// That command its for CLIENT STREAMING RPC RESPONSE
-message MovementsResponse {
-   string MovementsRequest1 = 1;
-
-}
 
 //That command its for BIDIRECTIONAL STREAMING
 message StretchingRequest {

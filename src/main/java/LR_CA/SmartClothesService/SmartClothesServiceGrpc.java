@@ -37,7 +37,7 @@ public final class SmartClothesServiceGrpc {
       fullMethodName = SERVICE_NAME + '/' + "bodyTempControl",
       requestType = LR_CA.SmartClothesService.ControlRequest.class,
       responseType = LR_CA.SmartClothesService.ControlResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<LR_CA.SmartClothesService.ControlRequest,
       LR_CA.SmartClothesService.ControlResponse> getBodyTempControlMethod() {
     io.grpc.MethodDescriptor<LR_CA.SmartClothesService.ControlRequest, LR_CA.SmartClothesService.ControlResponse> getBodyTempControlMethod;
@@ -46,7 +46,7 @@ public final class SmartClothesServiceGrpc {
         if ((getBodyTempControlMethod = SmartClothesServiceGrpc.getBodyTempControlMethod) == null) {
           SmartClothesServiceGrpc.getBodyTempControlMethod = getBodyTempControlMethod = 
               io.grpc.MethodDescriptor.<LR_CA.SmartClothesService.ControlRequest, LR_CA.SmartClothesService.ControlResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "service2.SmartClothesService", "bodyTempControl"))
               .setSampledToLocalTracing(true)
@@ -60,38 +60,6 @@ public final class SmartClothesServiceGrpc {
         }
      }
      return getBodyTempControlMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<LR_CA.SmartClothesService.MovementsRequest,
-      LR_CA.SmartClothesService.MovementsResponse> getPhysicalMovementsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "physicalMovements",
-      requestType = LR_CA.SmartClothesService.MovementsRequest.class,
-      responseType = LR_CA.SmartClothesService.MovementsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<LR_CA.SmartClothesService.MovementsRequest,
-      LR_CA.SmartClothesService.MovementsResponse> getPhysicalMovementsMethod() {
-    io.grpc.MethodDescriptor<LR_CA.SmartClothesService.MovementsRequest, LR_CA.SmartClothesService.MovementsResponse> getPhysicalMovementsMethod;
-    if ((getPhysicalMovementsMethod = SmartClothesServiceGrpc.getPhysicalMovementsMethod) == null) {
-      synchronized (SmartClothesServiceGrpc.class) {
-        if ((getPhysicalMovementsMethod = SmartClothesServiceGrpc.getPhysicalMovementsMethod) == null) {
-          SmartClothesServiceGrpc.getPhysicalMovementsMethod = getPhysicalMovementsMethod = 
-              io.grpc.MethodDescriptor.<LR_CA.SmartClothesService.MovementsRequest, LR_CA.SmartClothesService.MovementsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "service2.SmartClothesService", "physicalMovements"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.SmartClothesService.MovementsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.SmartClothesService.MovementsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmartClothesServiceMethodDescriptorSupplier("physicalMovements"))
-                  .build();
-          }
-        }
-     }
-     return getPhysicalMovementsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<LR_CA.SmartClothesService.StretchingRequest,
@@ -167,13 +135,6 @@ public final class SmartClothesServiceGrpc {
     }
 
     /**
-     */
-    public io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.MovementsRequest> physicalMovements(
-        io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.MovementsResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getPhysicalMovementsMethod(), responseObserver);
-    }
-
-    /**
      * <pre>
      * This is a bidirectional Streaming
      * </pre>
@@ -187,18 +148,11 @@ public final class SmartClothesServiceGrpc {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getBodyTempControlMethod(),
-            asyncBidiStreamingCall(
+            asyncClientStreamingCall(
               new MethodHandlers<
                 LR_CA.SmartClothesService.ControlRequest,
                 LR_CA.SmartClothesService.ControlResponse>(
                   this, METHODID_BODY_TEMP_CONTROL)))
-          .addMethod(
-            getPhysicalMovementsMethod(),
-            asyncBidiStreamingCall(
-              new MethodHandlers<
-                LR_CA.SmartClothesService.MovementsRequest,
-                LR_CA.SmartClothesService.MovementsResponse>(
-                  this, METHODID_PHYSICAL_MOVEMENTS)))
           .addMethod(
             getMusclesStretchingMethod(),
             asyncBidiStreamingCall(
@@ -238,16 +192,8 @@ public final class SmartClothesServiceGrpc {
      */
     public io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.ControlRequest> bodyTempControl(
         io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.ControlResponse> responseObserver) {
-      return asyncBidiStreamingCall(
+      return asyncClientStreamingCall(
           getChannel().newCall(getBodyTempControlMethod(), getCallOptions()), responseObserver);
-    }
-
-    /**
-     */
-    public io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.MovementsRequest> physicalMovements(
-        io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.MovementsResponse> responseObserver) {
-      return asyncBidiStreamingCall(
-          getChannel().newCall(getPhysicalMovementsMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -307,8 +253,7 @@ public final class SmartClothesServiceGrpc {
   }
 
   private static final int METHODID_BODY_TEMP_CONTROL = 0;
-  private static final int METHODID_PHYSICAL_MOVEMENTS = 1;
-  private static final int METHODID_MUSCLES_STRETCHING = 2;
+  private static final int METHODID_MUSCLES_STRETCHING = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -340,9 +285,6 @@ public final class SmartClothesServiceGrpc {
         case METHODID_BODY_TEMP_CONTROL:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.bodyTempControl(
               (io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.ControlResponse>) responseObserver);
-        case METHODID_PHYSICAL_MOVEMENTS:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.physicalMovements(
-              (io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.MovementsResponse>) responseObserver);
         case METHODID_MUSCLES_STRETCHING:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.musclesStretching(
               (io.grpc.stub.StreamObserver<LR_CA.SmartClothesService.StretchingResponse>) responseObserver);
@@ -398,7 +340,6 @@ public final class SmartClothesServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SmartClothesServiceFileDescriptorSupplier())
               .addMethod(getBodyTempControlMethod())
-              .addMethod(getPhysicalMovementsMethod())
               .addMethod(getMusclesStretchingMethod())
               .build();
         }

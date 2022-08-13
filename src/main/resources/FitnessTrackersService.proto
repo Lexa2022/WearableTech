@@ -14,13 +14,12 @@ package service2;
 service FitnessTrackersService {
 
 // rpc method for CLIENT STREAMING calls
-  rpc numberOfSteps(stream StepsRequest) returns (stream StepsResponse){}
+  rpc numberOfSteps(stream StepsRequest) returns (StepsResponse){}
 
 
 // This is a bidirectional Streaming
   rpc heartRateMonitor(stream MonitorRequest) returns (stream MonitorResponse){}
 
-  rpc bloodPressureMonitor(stream BloodPressureRequest) returns (stream BloodPressureResponse);
 
   }
 
@@ -33,7 +32,7 @@ message StepsRequest {
 }
 // That command its for CLIENT STREAMING RPC RESPONSE
 message StepsResponse {
-  string Steps = 1;
+  string output = 1;
 
 }
 
@@ -47,27 +46,5 @@ message MonitorResponse {
 
 }
 
-message BloodPressureRequest {
-   string BPressure1 = 1;
-
-}
-message BloodPressureResponse {
-   string BPressure1 = 1;
-
-}
 
 
-// Enum is a complex datatype that may contain other variables
-message Message {
-	enum Enum {
-        UNKNOWN = 0;
-        LOW = 1;
-        HIGH = 2;
-    }
-
-    Enum detail = 1;
-}
-
-message Empty {
-
-}

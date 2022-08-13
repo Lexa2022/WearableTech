@@ -37,7 +37,7 @@ public final class FitnessTrackersServiceGrpc {
       fullMethodName = SERVICE_NAME + '/' + "numberOfSteps",
       requestType = LR_CA.FitnessTrackersService.StepsRequest.class,
       responseType = LR_CA.FitnessTrackersService.StepsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<LR_CA.FitnessTrackersService.StepsRequest,
       LR_CA.FitnessTrackersService.StepsResponse> getNumberOfStepsMethod() {
     io.grpc.MethodDescriptor<LR_CA.FitnessTrackersService.StepsRequest, LR_CA.FitnessTrackersService.StepsResponse> getNumberOfStepsMethod;
@@ -46,7 +46,7 @@ public final class FitnessTrackersServiceGrpc {
         if ((getNumberOfStepsMethod = FitnessTrackersServiceGrpc.getNumberOfStepsMethod) == null) {
           FitnessTrackersServiceGrpc.getNumberOfStepsMethod = getNumberOfStepsMethod = 
               io.grpc.MethodDescriptor.<LR_CA.FitnessTrackersService.StepsRequest, LR_CA.FitnessTrackersService.StepsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "service2.FitnessTrackersService", "numberOfSteps"))
               .setSampledToLocalTracing(true)
@@ -92,38 +92,6 @@ public final class FitnessTrackersServiceGrpc {
         }
      }
      return getHeartRateMonitorMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<LR_CA.FitnessTrackersService.BloodPressureRequest,
-      LR_CA.FitnessTrackersService.BloodPressureResponse> getBloodPressureMonitorMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "bloodPressureMonitor",
-      requestType = LR_CA.FitnessTrackersService.BloodPressureRequest.class,
-      responseType = LR_CA.FitnessTrackersService.BloodPressureResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<LR_CA.FitnessTrackersService.BloodPressureRequest,
-      LR_CA.FitnessTrackersService.BloodPressureResponse> getBloodPressureMonitorMethod() {
-    io.grpc.MethodDescriptor<LR_CA.FitnessTrackersService.BloodPressureRequest, LR_CA.FitnessTrackersService.BloodPressureResponse> getBloodPressureMonitorMethod;
-    if ((getBloodPressureMonitorMethod = FitnessTrackersServiceGrpc.getBloodPressureMonitorMethod) == null) {
-      synchronized (FitnessTrackersServiceGrpc.class) {
-        if ((getBloodPressureMonitorMethod = FitnessTrackersServiceGrpc.getBloodPressureMonitorMethod) == null) {
-          FitnessTrackersServiceGrpc.getBloodPressureMonitorMethod = getBloodPressureMonitorMethod = 
-              io.grpc.MethodDescriptor.<LR_CA.FitnessTrackersService.BloodPressureRequest, LR_CA.FitnessTrackersService.BloodPressureResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "service2.FitnessTrackersService", "bloodPressureMonitor"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.FitnessTrackersService.BloodPressureRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.FitnessTrackersService.BloodPressureResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FitnessTrackersServiceMethodDescriptorSupplier("bloodPressureMonitor"))
-                  .build();
-          }
-        }
-     }
-     return getBloodPressureMonitorMethod;
   }
 
   /**
@@ -176,18 +144,11 @@ public final class FitnessTrackersServiceGrpc {
       return asyncUnimplementedStreamingCall(getHeartRateMonitorMethod(), responseObserver);
     }
 
-    /**
-     */
-    public io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.BloodPressureRequest> bloodPressureMonitor(
-        io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.BloodPressureResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getBloodPressureMonitorMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getNumberOfStepsMethod(),
-            asyncBidiStreamingCall(
+            asyncClientStreamingCall(
               new MethodHandlers<
                 LR_CA.FitnessTrackersService.StepsRequest,
                 LR_CA.FitnessTrackersService.StepsResponse>(
@@ -199,13 +160,6 @@ public final class FitnessTrackersServiceGrpc {
                 LR_CA.FitnessTrackersService.MonitorRequest,
                 LR_CA.FitnessTrackersService.MonitorResponse>(
                   this, METHODID_HEART_RATE_MONITOR)))
-          .addMethod(
-            getBloodPressureMonitorMethod(),
-            asyncBidiStreamingCall(
-              new MethodHandlers<
-                LR_CA.FitnessTrackersService.BloodPressureRequest,
-                LR_CA.FitnessTrackersService.BloodPressureResponse>(
-                  this, METHODID_BLOOD_PRESSURE_MONITOR)))
           .build();
     }
   }
@@ -238,7 +192,7 @@ public final class FitnessTrackersServiceGrpc {
      */
     public io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.StepsRequest> numberOfSteps(
         io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.StepsResponse> responseObserver) {
-      return asyncBidiStreamingCall(
+      return asyncClientStreamingCall(
           getChannel().newCall(getNumberOfStepsMethod(), getCallOptions()), responseObserver);
     }
 
@@ -251,14 +205,6 @@ public final class FitnessTrackersServiceGrpc {
         io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.MonitorResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getHeartRateMonitorMethod(), getCallOptions()), responseObserver);
-    }
-
-    /**
-     */
-    public io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.BloodPressureRequest> bloodPressureMonitor(
-        io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.BloodPressureResponse> responseObserver) {
-      return asyncBidiStreamingCall(
-          getChannel().newCall(getBloodPressureMonitorMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -308,7 +254,6 @@ public final class FitnessTrackersServiceGrpc {
 
   private static final int METHODID_NUMBER_OF_STEPS = 0;
   private static final int METHODID_HEART_RATE_MONITOR = 1;
-  private static final int METHODID_BLOOD_PRESSURE_MONITOR = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -343,9 +288,6 @@ public final class FitnessTrackersServiceGrpc {
         case METHODID_HEART_RATE_MONITOR:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.heartRateMonitor(
               (io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.MonitorResponse>) responseObserver);
-        case METHODID_BLOOD_PRESSURE_MONITOR:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.bloodPressureMonitor(
-              (io.grpc.stub.StreamObserver<LR_CA.FitnessTrackersService.BloodPressureResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -399,7 +341,6 @@ public final class FitnessTrackersServiceGrpc {
               .setSchemaDescriptor(new FitnessTrackersServiceFileDescriptorSupplier())
               .addMethod(getNumberOfStepsMethod())
               .addMethod(getHeartRateMonitorMethod())
-              .addMethod(getBloodPressureMonitorMethod())
               .build();
         }
       }

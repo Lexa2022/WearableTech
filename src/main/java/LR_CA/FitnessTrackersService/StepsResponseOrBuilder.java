@@ -8,12 +8,12 @@ public interface StepsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string Steps = 1;</code>
+   * <code>string output = 1;</code>
    */
-  java.lang.String getSteps();
+  java.lang.String getOutput();
   /**
-   * <code>string Steps = 1;</code>
+   * <code>string output = 1;</code>
    */
   com.google.protobuf.ByteString
-      getStepsBytes();
+      getOutputBytes();
 }

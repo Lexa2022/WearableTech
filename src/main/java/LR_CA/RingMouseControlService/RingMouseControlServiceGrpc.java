@@ -31,67 +31,35 @@ public final class RingMouseControlServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest,
-      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToRightMethod;
+      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "moveCursorToRight",
+      fullMethodName = SERVICE_NAME + '/' + "moveCursor",
       requestType = LR_CA.RingMouseControlService.MoveRequest.class,
       responseType = LR_CA.RingMouseControlService.MoveResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest,
-      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToRightMethod() {
-    io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest, LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToRightMethod;
-    if ((getMoveCursorToRightMethod = RingMouseControlServiceGrpc.getMoveCursorToRightMethod) == null) {
+      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorMethod() {
+    io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest, LR_CA.RingMouseControlService.MoveResponse> getMoveCursorMethod;
+    if ((getMoveCursorMethod = RingMouseControlServiceGrpc.getMoveCursorMethod) == null) {
       synchronized (RingMouseControlServiceGrpc.class) {
-        if ((getMoveCursorToRightMethod = RingMouseControlServiceGrpc.getMoveCursorToRightMethod) == null) {
-          RingMouseControlServiceGrpc.getMoveCursorToRightMethod = getMoveCursorToRightMethod = 
+        if ((getMoveCursorMethod = RingMouseControlServiceGrpc.getMoveCursorMethod) == null) {
+          RingMouseControlServiceGrpc.getMoveCursorMethod = getMoveCursorMethod = 
               io.grpc.MethodDescriptor.<LR_CA.RingMouseControlService.MoveRequest, LR_CA.RingMouseControlService.MoveResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "service1.RingMouseControlService", "moveCursorToRight"))
+                  "service1.RingMouseControlService", "moveCursor"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   LR_CA.RingMouseControlService.MoveRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   LR_CA.RingMouseControlService.MoveResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RingMouseControlServiceMethodDescriptorSupplier("moveCursorToRight"))
+                  .setSchemaDescriptor(new RingMouseControlServiceMethodDescriptorSupplier("moveCursor"))
                   .build();
           }
         }
      }
-     return getMoveCursorToRightMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest,
-      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToLeftMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "moveCursorToLeft",
-      requestType = LR_CA.RingMouseControlService.MoveRequest.class,
-      responseType = LR_CA.RingMouseControlService.MoveResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest,
-      LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToLeftMethod() {
-    io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.MoveRequest, LR_CA.RingMouseControlService.MoveResponse> getMoveCursorToLeftMethod;
-    if ((getMoveCursorToLeftMethod = RingMouseControlServiceGrpc.getMoveCursorToLeftMethod) == null) {
-      synchronized (RingMouseControlServiceGrpc.class) {
-        if ((getMoveCursorToLeftMethod = RingMouseControlServiceGrpc.getMoveCursorToLeftMethod) == null) {
-          RingMouseControlServiceGrpc.getMoveCursorToLeftMethod = getMoveCursorToLeftMethod = 
-              io.grpc.MethodDescriptor.<LR_CA.RingMouseControlService.MoveRequest, LR_CA.RingMouseControlService.MoveResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "service1.RingMouseControlService", "moveCursorToLeft"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.RingMouseControlService.MoveRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LR_CA.RingMouseControlService.MoveResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RingMouseControlServiceMethodDescriptorSupplier("moveCursorToLeft"))
-                  .build();
-          }
-        }
-     }
-     return getMoveCursorToLeftMethod;
+     return getMoveCursorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<LR_CA.RingMouseControlService.Message,
@@ -193,16 +161,9 @@ public final class RingMouseControlServiceGrpc {
      * rpc method for unary calls
      * </pre>
      */
-    public void moveCursorToRight(LR_CA.RingMouseControlService.MoveRequest request,
+    public void moveCursor(LR_CA.RingMouseControlService.MoveRequest request,
         io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveCursorToRightMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void moveCursorToLeft(LR_CA.RingMouseControlService.MoveRequest request,
-        io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveCursorToLeftMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getMoveCursorMethod(), responseObserver);
     }
 
     /**
@@ -228,19 +189,12 @@ public final class RingMouseControlServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getMoveCursorToRightMethod(),
+            getMoveCursorMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 LR_CA.RingMouseControlService.MoveRequest,
                 LR_CA.RingMouseControlService.MoveResponse>(
-                  this, METHODID_MOVE_CURSOR_TO_RIGHT)))
-          .addMethod(
-            getMoveCursorToLeftMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                LR_CA.RingMouseControlService.MoveRequest,
-                LR_CA.RingMouseControlService.MoveResponse>(
-                  this, METHODID_MOVE_CURSOR_TO_LEFT)))
+                  this, METHODID_MOVE_CURSOR)))
           .addMethod(
             getEmptyMethod(),
             asyncUnaryCall(
@@ -285,18 +239,10 @@ public final class RingMouseControlServiceGrpc {
      * rpc method for unary calls
      * </pre>
      */
-    public void moveCursorToRight(LR_CA.RingMouseControlService.MoveRequest request,
+    public void moveCursor(LR_CA.RingMouseControlService.MoveRequest request,
         io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMoveCursorToRightMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void moveCursorToLeft(LR_CA.RingMouseControlService.MoveRequest request,
-        io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getMoveCursorToLeftMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMoveCursorMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -348,16 +294,9 @@ public final class RingMouseControlServiceGrpc {
      * rpc method for unary calls
      * </pre>
      */
-    public LR_CA.RingMouseControlService.MoveResponse moveCursorToRight(LR_CA.RingMouseControlService.MoveRequest request) {
+    public LR_CA.RingMouseControlService.MoveResponse moveCursor(LR_CA.RingMouseControlService.MoveRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMoveCursorToRightMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public LR_CA.RingMouseControlService.MoveResponse moveCursorToLeft(LR_CA.RingMouseControlService.MoveRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getMoveCursorToLeftMethod(), getCallOptions(), request);
+          getChannel(), getMoveCursorMethod(), getCallOptions(), request);
     }
 
     /**
@@ -408,18 +347,10 @@ public final class RingMouseControlServiceGrpc {
      * rpc method for unary calls
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<LR_CA.RingMouseControlService.MoveResponse> moveCursorToRight(
+    public com.google.common.util.concurrent.ListenableFuture<LR_CA.RingMouseControlService.MoveResponse> moveCursor(
         LR_CA.RingMouseControlService.MoveRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMoveCursorToRightMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<LR_CA.RingMouseControlService.MoveResponse> moveCursorToLeft(
-        LR_CA.RingMouseControlService.MoveRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getMoveCursorToLeftMethod(), getCallOptions()), request);
+          getChannel().newCall(getMoveCursorMethod(), getCallOptions()), request);
     }
 
     /**
@@ -434,10 +365,9 @@ public final class RingMouseControlServiceGrpc {
     }
   }
 
-  private static final int METHODID_MOVE_CURSOR_TO_RIGHT = 0;
-  private static final int METHODID_MOVE_CURSOR_TO_LEFT = 1;
-  private static final int METHODID_EMPTY = 2;
-  private static final int METHODID_SELECT_OBJECT_TEXT = 3;
+  private static final int METHODID_MOVE_CURSOR = 0;
+  private static final int METHODID_EMPTY = 1;
+  private static final int METHODID_SELECT_OBJECT_TEXT = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -456,12 +386,8 @@ public final class RingMouseControlServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_MOVE_CURSOR_TO_RIGHT:
-          serviceImpl.moveCursorToRight((LR_CA.RingMouseControlService.MoveRequest) request,
-              (io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse>) responseObserver);
-          break;
-        case METHODID_MOVE_CURSOR_TO_LEFT:
-          serviceImpl.moveCursorToLeft((LR_CA.RingMouseControlService.MoveRequest) request,
+        case METHODID_MOVE_CURSOR:
+          serviceImpl.moveCursor((LR_CA.RingMouseControlService.MoveRequest) request,
               (io.grpc.stub.StreamObserver<LR_CA.RingMouseControlService.MoveResponse>) responseObserver);
           break;
         case METHODID_EMPTY:
@@ -533,8 +459,7 @@ public final class RingMouseControlServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RingMouseControlServiceFileDescriptorSupplier())
-              .addMethod(getMoveCursorToRightMethod())
-              .addMethod(getMoveCursorToLeftMethod())
+              .addMethod(getMoveCursorMethod())
               .addMethod(getEmptyMethod())
               .addMethod(getSelectObjectTextMethod())
               .build();

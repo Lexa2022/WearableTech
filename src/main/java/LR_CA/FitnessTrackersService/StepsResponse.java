@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private StepsResponse() {
-    steps_ = "";
+    output_ = "";
   }
 
   @java.lang.Override
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            steps_ = s;
+            output_ = s;
             break;
           }
           default: {
@@ -85,34 +85,34 @@ private static final long serialVersionUID = 0L;
             LR_CA.FitnessTrackersService.StepsResponse.class, LR_CA.FitnessTrackersService.StepsResponse.Builder.class);
   }
 
-  public static final int STEPS_FIELD_NUMBER = 1;
-  private volatile java.lang.Object steps_;
+  public static final int OUTPUT_FIELD_NUMBER = 1;
+  private volatile java.lang.Object output_;
   /**
-   * <code>string Steps = 1;</code>
+   * <code>string output = 1;</code>
    */
-  public java.lang.String getSteps() {
-    java.lang.Object ref = steps_;
+  public java.lang.String getOutput() {
+    java.lang.Object ref = output_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      steps_ = s;
+      output_ = s;
       return s;
     }
   }
   /**
-   * <code>string Steps = 1;</code>
+   * <code>string output = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getStepsBytes() {
-    java.lang.Object ref = steps_;
+      getOutputBytes() {
+    java.lang.Object ref = output_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      steps_ = b;
+      output_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -133,8 +133,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getStepsBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, steps_);
+    if (!getOutputBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, output_);
     }
     unknownFields.writeTo(output);
   }
@@ -145,8 +145,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getStepsBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, steps_);
+    if (!getOutputBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, output_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -164,8 +164,8 @@ private static final long serialVersionUID = 0L;
     LR_CA.FitnessTrackersService.StepsResponse other = (LR_CA.FitnessTrackersService.StepsResponse) obj;
 
     boolean result = true;
-    result = result && getSteps()
-        .equals(other.getSteps());
+    result = result && getOutput()
+        .equals(other.getOutput());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -177,8 +177,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + STEPS_FIELD_NUMBER;
-    hash = (53 * hash) + getSteps().hashCode();
+    hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+    hash = (53 * hash) + getOutput().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      steps_ = "";
+      output_ = "";
 
       return this;
     }
@@ -344,7 +344,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public LR_CA.FitnessTrackersService.StepsResponse buildPartial() {
       LR_CA.FitnessTrackersService.StepsResponse result = new LR_CA.FitnessTrackersService.StepsResponse(this);
-      result.steps_ = steps_;
+      result.output_ = output_;
       onBuilt();
       return result;
     }
@@ -393,8 +393,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(LR_CA.FitnessTrackersService.StepsResponse other) {
       if (other == LR_CA.FitnessTrackersService.StepsResponse.getDefaultInstance()) return this;
-      if (!other.getSteps().isEmpty()) {
-        steps_ = other.steps_;
+      if (!other.getOutput().isEmpty()) {
+        output_ = other.output_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -426,71 +426,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object steps_ = "";
+    private java.lang.Object output_ = "";
     /**
-     * <code>string Steps = 1;</code>
+     * <code>string output = 1;</code>
      */
-    public java.lang.String getSteps() {
-      java.lang.Object ref = steps_;
+    public java.lang.String getOutput() {
+      java.lang.Object ref = output_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        steps_ = s;
+        output_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string Steps = 1;</code>
+     * <code>string output = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getStepsBytes() {
-      java.lang.Object ref = steps_;
+        getOutputBytes() {
+      java.lang.Object ref = output_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        steps_ = b;
+        output_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string Steps = 1;</code>
+     * <code>string output = 1;</code>
      */
-    public Builder setSteps(
+    public Builder setOutput(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      steps_ = value;
+      output_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string Steps = 1;</code>
+     * <code>string output = 1;</code>
      */
-    public Builder clearSteps() {
+    public Builder clearOutput() {
       
-      steps_ = getDefaultInstance().getSteps();
+      output_ = getDefaultInstance().getOutput();
       onChanged();
       return this;
     }
     /**
-     * <code>string Steps = 1;</code>
+     * <code>string output = 1;</code>
      */
-    public Builder setStepsBytes(
+    public Builder setOutputBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      steps_ = value;
+      output_ = value;
       onChanged();
       return this;
     }

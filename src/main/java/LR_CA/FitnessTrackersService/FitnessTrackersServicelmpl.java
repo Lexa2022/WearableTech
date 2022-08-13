@@ -34,26 +34,6 @@ public final class FitnessTrackersServicelmpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service2_MonitorResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_BloodPressureRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_BloodPressureRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_BloodPressureResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_BloodPressureResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_Message_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_Message_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service2_Empty_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service2_Empty_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -64,23 +44,16 @@ public final class FitnessTrackersServicelmpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\034FitnessTrackersService.proto\022\010service2" +
-      "\"\035\n\014StepsRequest\022\r\n\005Steps\030\001 \001(\t\"\036\n\rSteps" +
-      "Response\022\r\n\005Steps\030\001 \001(\t\"\"\n\016MonitorReques" +
-      "t\022\020\n\010Monitor1\030\001 \001(\t\"#\n\017MonitorResponse\022\020" +
-      "\n\010Monitor1\030\001 \001(\t\"*\n\024BloodPressureRequest" +
-      "\022\022\n\nBPressure1\030\001 \001(\t\"+\n\025BloodPressureRes" +
-      "ponse\022\022\n\nBPressure1\030\001 \001(\t\"Y\n\007Message\022&\n\006" +
-      "detail\030\001 \001(\0162\026.service2.Message.Enum\"&\n\004" +
-      "Enum\022\013\n\007UNKNOWN\020\000\022\007\n\003LOW\020\001\022\010\n\004HIGH\020\002\"\007\n\005" +
-      "Empty2\214\002\n\026FitnessTrackersService\022F\n\rnumb" +
-      "erOfSteps\022\026.service2.StepsRequest\032\027.serv" +
-      "ice2.StepsResponse\"\000(\0010\001\022M\n\020heartRateMon" +
-      "itor\022\030.service2.MonitorRequest\032\031.service" +
-      "2.MonitorResponse\"\000(\0010\001\022[\n\024bloodPressure" +
-      "Monitor\022\036.service2.BloodPressureRequest\032" +
-      "\037.service2.BloodPressureResponse(\0010\001B<\n\034" +
-      "LR_CA.FitnessTrackersServiceB\032FitnessTra" +
-      "ckersServicelmplP\001b\006proto3"
+      "\"\035\n\014StepsRequest\022\r\n\005Steps\030\001 \001(\t\"\037\n\rSteps" +
+      "Response\022\016\n\006output\030\001 \001(\t\"\"\n\016MonitorReque" +
+      "st\022\020\n\010Monitor1\030\001 \001(\t\"#\n\017MonitorResponse\022" +
+      "\020\n\010Monitor1\030\001 \001(\t2\255\001\n\026FitnessTrackersSer" +
+      "vice\022D\n\rnumberOfSteps\022\026.service2.StepsRe" +
+      "quest\032\027.service2.StepsResponse\"\000(\001\022M\n\020he" +
+      "artRateMonitor\022\030.service2.MonitorRequest" +
+      "\032\031.service2.MonitorResponse\"\000(\0010\001B<\n\034LR_" +
+      "CA.FitnessTrackersServiceB\032FitnessTracke" +
+      "rsServicelmplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -105,7 +78,7 @@ public final class FitnessTrackersServicelmpl {
     internal_static_service2_StepsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_StepsResponse_descriptor,
-        new java.lang.String[] { "Steps", });
+        new java.lang.String[] { "Output", });
     internal_static_service2_MonitorRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_service2_MonitorRequest_fieldAccessorTable = new
@@ -118,30 +91,6 @@ public final class FitnessTrackersServicelmpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service2_MonitorResponse_descriptor,
         new java.lang.String[] { "Monitor1", });
-    internal_static_service2_BloodPressureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_service2_BloodPressureRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_BloodPressureRequest_descriptor,
-        new java.lang.String[] { "BPressure1", });
-    internal_static_service2_BloodPressureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_service2_BloodPressureResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_BloodPressureResponse_descriptor,
-        new java.lang.String[] { "BPressure1", });
-    internal_static_service2_Message_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_service2_Message_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_Message_descriptor,
-        new java.lang.String[] { "Detail", });
-    internal_static_service2_Empty_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_service2_Empty_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service2_Empty_descriptor,
-        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

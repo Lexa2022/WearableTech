@@ -14,9 +14,7 @@ package service1;
 service RingMouseControlService {
 
 // rpc method for unary calls
-  rpc moveCursorToRight(MoveRequest) returns (MoveResponse) {}
-
-  rpc moveCursorToLeft(MoveRequest) returns (MoveResponse) {}
+  rpc moveCursor(MoveRequest) returns (MoveResponse) {}
 
 // rpc method that does not return any response
   rpc empty(Message) returns (Empty) {}
