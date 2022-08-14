@@ -65,7 +65,7 @@
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
-						<goals>
+						<goals> 
 							<goal>run</goal>
 						</goals>
 						<configuration>
