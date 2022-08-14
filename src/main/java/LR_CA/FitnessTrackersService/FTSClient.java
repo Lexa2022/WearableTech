@@ -1,5 +1,5 @@
 package LR_CA.FitnessTrackersService;
-
+//CA Leticia Romeu dos Santos 
 	import java.util.ArrayList;
 	import java.util.Iterator;
 	import java.util.List;
