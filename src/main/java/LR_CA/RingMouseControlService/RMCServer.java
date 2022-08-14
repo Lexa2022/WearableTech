@@ -1,4 +1,4 @@
-package LR_CA.RingMouseControlService; //CA Leticia Romeu dos Santos 
+package LR_CA.RingMouseControlService; 
 
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;

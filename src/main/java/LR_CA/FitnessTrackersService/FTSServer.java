@@ -1,4 +1,4 @@
-package LR_CA.FitnessTrackersService;  //CA Leticia Romeu dos Santos 
+package LR_CA.FitnessTrackersService;  
 
 
 	import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
